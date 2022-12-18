@@ -1,6 +1,4 @@
 import allure
-from fixture.card import CardHelper
-
 
 def test_card_value_button(app):
     for value_card in app.card.value_card_list():
