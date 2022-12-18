@@ -5,6 +5,7 @@ import json
 
 fixture = None
 
+
 @pytest.fixture
 def app(request):
     web_config = load_config()
