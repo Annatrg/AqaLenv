@@ -29,3 +29,4 @@ class CardHelper:
 
     def check_card_value_from_button_and_card_value_from_input(self, value_card):
         assert self.get_card_value_from_button(value_card) == self.get_card_value_from_input()
+

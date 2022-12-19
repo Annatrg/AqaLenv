@@ -2,7 +2,6 @@ from selenium import webdriver
 from fixture_1.card import CardHelper
 from fixture_1.session import SessionHelper
 
-
 class Application:
     def __init__(self, base_url):
         self.wd = webdriver.Chrome()

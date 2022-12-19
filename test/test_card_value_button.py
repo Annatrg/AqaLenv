@@ -1,6 +1,5 @@
 import allure
 
-
 def test_card_value_button(app):
     for value_card in app.card.value_card_list():
         with allure.step(f'Проверка клика по кнопке с номиналом {app.card.get_card_value_from_button(value_card)}'):
