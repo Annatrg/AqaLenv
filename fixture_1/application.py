@@ -1,6 +1,6 @@
 from selenium import webdriver
-from fixture.card import CardHelper
-from fixture.session import SessionHelper
+from fixture_1.card import CardHelper
+from fixture_1.session import SessionHelper
 
 
 class Application:

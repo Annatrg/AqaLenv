@@ -22,5 +22,4 @@ class Api:
         list = []
         for search in response.json()['products']:
             list.append(JsTestTask.parse_obj(search))
-           # list.append(JsTestTask(name=name, image=image, price=price))
         return list
