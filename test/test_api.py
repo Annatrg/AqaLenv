@@ -1,3 +1,4 @@
+
 def test_api(app2):
     products = app2.get_results(search="Alcatel", sort_field="name")
     for product in products:

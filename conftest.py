@@ -1,18 +1,21 @@
 import pytest
-from fixture_1.application import Application
-from fixture_2.js_test_task import Api
+# from digift.application import Application
+from api.js_test_task import Api
 import os.path
 import json
+from selenium import webdriver
+from digift.session import Session
 
 fixture = None
 
-@pytest.fixture
-def app(request):
-    web_config = load_config()
-    fixture = Application(base_url=web_config["baseUrl"])
-    fixture.session.basic_auth(login=web_config["login"], password=web_config["password"])
-    return fixture
+@pytest.fixture(scope='session')
+def app():
+    wd = webdriver.Chrome()
+    wd.implicitly_wait(5)
+    yield wd
+    wd.quit()
 
+@pytest.fixture(scope='session')
 def load_config():
     config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "target.json")
     with open(config_file) as f:

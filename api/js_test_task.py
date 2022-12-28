@@ -5,10 +5,10 @@ from model.jstesttask import JsTestTask
 class Api:
 
     def __init__(self, config):
-        self.base_url = config['baseUrl']
-        self.method = config['method']
-        self.search = config['search']
-        self.sort_field = config['sort_field']
+        self.base_url = config["js_test_task"]['baseUrl']
+        self.method = config["js_test_task"]['method']
+        self.search = config["js_test_task"]['search']
+        self.sort_field = config["js_test_task"]['sort_field']
 
     def get_results(self, search='', sort_field=''):
         if search != '':
